@@ -21,5 +21,5 @@ public class HelloController {
 
 
 /*
-    RequestParam는 외부에서 ㄹAPI로 넘긴 파라미터를 가져오는 어노테이션이다.
+    RequestParam는 외부에서 API로 넘긴 파라미터를 가져오는 어노테이션이다.
 */
