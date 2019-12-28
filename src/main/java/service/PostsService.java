@@ -1,11 +1,13 @@
 package service;
 
+import com.where.springboot.domain.posts.Posts;
 import com.where.springboot.domain.posts.PostsRepository;
+import com.where.springboot.web.dto.PostsResponseDto;
 import com.where.springboot.web.dto.PostsSaveRequestDto;
+import com.where.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import javax.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 
 /*
     RequiredArgsConstructor가 생성자로 bean객체를 받는 역할을 한다. private가 붙은 필드를 인자값으로 하는 생성자를 롬복이 대신 생성한다.
@@ -19,5 +21,12 @@ public class PostsService {
     @Transactional
     public Long save(PostsSaveRequestDto requestDto){
         return postsRepository.save(requestDto.toEntity()).getId();
+    }
+
+    @Transactional
+    public Long update(Long id, PostsUpdateRequestDto requestDto){
+        Posts posts = postsRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다. id = " + id));
+
+        return new PostsResponseDto(entity);
     }
 }
