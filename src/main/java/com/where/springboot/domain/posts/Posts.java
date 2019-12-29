@@ -1,4 +1,5 @@
 package com.where.springboot.domain.posts;
+import com.where.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,7 +13,7 @@ import javax.persistence.Id;
 @Getter // 롬복 어노테이션 - 클래스 내 모든 필드에 Getter 메소드를 자동 생성
 @NoArgsConstructor // 롬복 어노테이션 - 기본 생성자 자동추가
 @Entity // 테이블과 링크될 클래스임을 나타낸다, 클래스의 카멜케이스 이름을 언더스코어 네이밍으로 매칭한다. 예) SalesManager -> sales_manager table
-public class Posts { // 실제 DB테이블과 매칭될 클래스이다, 흔히 Entity클래스 라고도 부른다. JPA를 사용하면 DB데이터에 작업할 경우 실제쿼리를 날리기보다 Entity클래스의 수정을 통해 작업하게 된다.
+public class Posts extends BaseTimeEntity { // 실제 DB테이블과 매칭될 클래스이다, 흔히 Entity클래스 라고도 부른다. JPA를 사용하면 DB데이터에 작업할 경우 실제쿼리를 날리기보다 Entity클래스의 수정을 통해 작업하게 된다.
 
     @Id // 해당 테이블의 PK(Primary Key)필드를 나타낸다.
     @GeneratedValue(strategy = GenerationType.IDENTITY) // PK생성 규칙을 나타낸다. 스프링부트 2.0에서는 Generation.Type.IDENTITY 옵션을 추가해야만 auto_increment가 된다.
