@@ -36,7 +36,7 @@ dependencies {
     compile('org.projectlombok:lombok') // lombok
     compile('org.springframework.boot:spring-boot-starter-data-jpa') // springBoot용 Spring Data Jpa 추상화 라이브러리, 스프링부트 버전에맞춰 자동으로 JPA관련 라이브러리를 관리해준다.
     compile('com.h2database:h2') // 설치없이 프로젝트의존성만으로 관리가능, 인메모리 관계형DB라서 메모리에서 실행된다. 즉, 애플리케이션이 재시작하면 휘발성으로 사라진다. (테스트용 으로 주로 쓰임)
-//    compile('org.springframework.boot:spring-boot-starter-mustache')
+    compile('org.springframework.boot:spring-boot-starter-mustache') // view 템플릿 엔진 머스테치 적용
 
 //    compile('org.springframework.boot:spring-boot-starter-oauth2-client')
 //    compile('org.springframework.session:spring-session-jdbc')
