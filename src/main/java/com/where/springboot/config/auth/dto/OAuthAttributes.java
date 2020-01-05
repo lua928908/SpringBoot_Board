@@ -1,4 +1,4 @@
-package com.where.springboot.configure.auth.dto;
+package com.where.springboot.config.auth.dto;
 
 import com.where.springboot.domain.user.Role;
 import com.where.springboot.domain.user.User;

@@ -1,7 +1,7 @@
-package com.where.springboot.configure.auth;
+package com.where.springboot.config.auth;
 
-import com.where.springboot.configure.auth.dto.OAuthAttributes;
-import com.where.springboot.configure.auth.dto.SessionUser;
+import com.where.springboot.config.auth.dto.OAuthAttributes;
+import com.where.springboot.config.auth.dto.SessionUser;
 import com.where.springboot.domain.user.User;
 import com.where.springboot.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
