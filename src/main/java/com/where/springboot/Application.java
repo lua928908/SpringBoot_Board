@@ -7,7 +7,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
     SpringBootApplication로 인해 자동 설정, Bean 일기,쓰기가 가능해진다.
     SpringBootApplication 어노테이션이 있는 위치부터 설정을 읽어가기 때문에 항상 프로젝트 최상단에 있어야 한다.
 */
-@EnableJpaAuditing // JPA Auditing 활성화 어노테이션
 @SpringBootApplication
 public class Application {
     public static void main(String[] args){
